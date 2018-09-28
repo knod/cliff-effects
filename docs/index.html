@@ -199,9 +199,9 @@
               
                 
                 <li><a
-                  href='#feedbackprompt'
+                  href='#onleavecallback'
                   class="">
-                  FeedbackPrompt
+                  onLeaveCallback
                   
                 </a>
                 
@@ -209,9 +209,9 @@
               
                 
                 <li><a
-                  href='#onleavecallback'
+                  href='#feedbackprompt'
                   class="">
-                  onLeaveCallback
+                  FeedbackPrompt
                   
                 </a>
                 
@@ -689,6 +689,16 @@
               
                 
                 <li><a
+                  href='#values'
+                  class="">
+                  values
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#getdependentcostsmonthly'
                   class="">
                   getDependentCostsMonthly
@@ -792,26 +802,6 @@
                   href='#totalsrowheaderstyle'
                   class="">
                   totalsRowHeaderStyle
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#stackedbargraph'
-                  class="">
-                  StackedBarGraph
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#getbenefittimeframes'
-                  class="">
-                  getBenefitTimeFrames
                   
                 </a>
                 
@@ -1042,6 +1032,26 @@
                   href='#handicapallowance'
                   class="">
                   handicapAllowance
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#stackedbargraph'
+                  class="">
+                  StackedBarGraph
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getbenefittimeframes'
+                  class="">
+                  getBenefitTimeFrames
                   
                 </a>
                 
@@ -2032,8 +2042,7 @@ been set.</p>
   </div>
   
 
-  <p>Transformers for transforming client
-values into valid values.</p>
+  <p>Reused Functionality</p>
 
  
   
@@ -2102,7 +2111,8 @@ values into valid values.</p>
   </div>
   
 
-  <p>Reused Functionality</p>
+  <p>Transformers for transforming client
+values into valid values.</p>
 
  
   
@@ -2750,6 +2760,75 @@ that to decide what to do next.</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='onleavecallback'>
+      onLeaveCallback
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Called with result of user interaction with on leave modal.
+Receives true if the user chose to leave,
+or false if the user chose to stay.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>onLeaveCallback(ok: any)</div>
+   
+  
+    <p>
+      Type:
+      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>ok</span> <code class='quiet'>(any)</code>
+	    {boolean} - Result of result of user interaction.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='feedbackprompt'>
       FeedbackPrompt
     </h3>
@@ -2889,27 +2968,19 @@ that to decide what to do next.</p>
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='onleavecallback'>
-      onLeaveCallback
+    <h3 class='fl m0' id='incomeform'>
+      IncomeForm
     </h3>
     
     
   </div>
   
 
-  <p>Called with result of user interaction with on leave modal.
-Receives true if the user chose to leave,
-or false if the user chose to stay.</p>
-
+  
  
   
-    <div class='pre p1 fill-light mt0'>onLeaveCallback(ok: any)</div>
+    <div class='pre p1 fill-light mt0'>IncomeForm(props: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): any</div>
    
-  
-    <p>
-      Type:
-      <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function">Function</a>
-    </p>
   
   
 
@@ -2926,10 +2997,58 @@ or false if the user chose to stay.</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>ok</span> <code class='quiet'>(any)</code>
-	    {boolean} - Result of result of user interaction.
+            <span class='code bold'>props</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    See below
 
           </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.current</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.time</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.updateClientValue</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>props.snippets</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
           
         </div>
       
@@ -2938,6 +3057,14 @@ or false if the user chose to stay.</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        Component
+
+      
+    
   
 
   
@@ -3046,123 +3173,6 @@ or false if the user chose to stay.</p>
 
   
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='incomeform'>
-      IncomeForm
-    </h3>
-    
-    
-  </div>
-  
-
-  
- 
-  
-    <div class='pre p1 fill-light mt0'>IncomeForm(props: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): any</div>
-   
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>props</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
-	    See below
-
-          </div>
-          
-          <table class='mt1 mb2 fixed-table h5 col-12'>
-            <colgroup>
-              <col width='30%' />
-              <col width='70%' />
-            </colgroup>
-            <thead>
-              <tr class='bold fill-light'>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody class='mt1'>
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>props.current</span> <code class='quiet'>any</code>
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>props.time</span> <code class='quiet'>any</code>
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>props.updateClientValue</span> <code class='quiet'>any</code>
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>props.snippets</span> <code class='quiet'>any</code>
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-              
-            </tbody>
-          </table>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>any</code>:
-        Component
-
-      
-    
   
 
   
@@ -7010,6 +7020,53 @@ a <code>client</code>s household that pass <code>memberTest()</code></p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='values'>
+      values
+    </h3>
+    
+    
+  </div>
+  
+
+  
+ 
+  
+    <div class='pre p1 fill-light mt0'>values</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='getdependentcostsmonthly'>
       getDependentCostsMonthly
     </h3>
@@ -7736,174 +7793,6 @@ including the ability to change earned income.</p>
   
   
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='stackedbargraph'>
-      StackedBarGraph
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Visual representation of the table</p>
-<p>Alternatives:
-1. Stacked area graph for two data points
-2. Line graph of difference of just total money coming in</p>
-
- 
-  
-    <div class='pre p1 fill-light mt0'>StackedBarGraph</div>
-   
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>client</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
-	    full client object, with current
-and future. All client props are needed.
-
-          </div>
-          
-          <table class='mt1 mb2 fixed-table h5 col-12'>
-            <colgroup>
-              <col width='30%' />
-              <col width='70%' />
-            </colgroup>
-            <thead>
-              <tr class='bold fill-light'>
-                <th>Name</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody class='mt1'>
-              
-                <tr>
-  <td class='break-word'><span class='code bold'>client.client</span> <code class='quiet'>any</code>
-  </td>
-  <td class='break-word'><span></span></td>
-</tr>
-
-
-              
-            </tbody>
-          </table>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='getbenefittimeframes'>
-      getBenefitTimeFrames
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Abstracts current and future program and
-income values on Predictions form</p>
-
- 
-  
-    <div class='pre p1 fill-light mt0'>getBenefitTimeFrames</div>
-   
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>client</span> <code class='quiet'>(any)</code>
-	    
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>benefitCheck</span> <code class='quiet'>(any)</code>
-	    
-          </div>
-          
-        </div>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>benefitsFunc</span> <code class='quiet'>(any)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
   
 
   
@@ -9018,14 +8907,16 @@ return the highest converted value.</p>
   </div>
   
 
-  <p>Properties <code>client</code> object is required to have to get a valid
-result. This doesn't mean the user filled in all the data, just
-that the object passed into here contains everything needed in the
-form that it's needed.</p>
+  <p>Can only be useful in predicting future subisdy amounts.</p>
+<p>Uses old and new cash flow data, return new subsidy amount,
+include new rent share.</p>
+<p>var diff = new min ttp - old min ttp;
+var new rent share = old rent share + diff;
+var new subsidy = contract rent - new rent share</p>
 
  
   
-    <div class='pre p1 fill-light mt0'>getSection8Benefit</div>
+    <div class='pre p1 fill-light mt0'>getSection8Benefit(client: any, timeframe: any)</div>
    
   
   
@@ -9035,7 +8926,10 @@ form that it's needed.</p>
   
   
   
-  
+  <div>Since: 09/2017
+
+With Project Hopes&#39;s guidance, we&#39;re using old known values (as
+known as they can get) to derive new values.</div>
 
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
@@ -9090,16 +8984,14 @@ form that it's needed.</p>
   </div>
   
 
-  <p>Can only be useful in predicting future subisdy amounts.</p>
-<p>Uses old and new cash flow data, return new subsidy amount,
-include new rent share.</p>
-<p>var diff = new min ttp - old min ttp;
-var new rent share = old rent share + diff;
-var new subsidy = contract rent - new rent share</p>
+  <p>Properties <code>client</code> object is required to have to get a valid
+result. This doesn't mean the user filled in all the data, just
+that the object passed into here contains everything needed in the
+form that it's needed.</p>
 
  
   
-    <div class='pre p1 fill-light mt0'>getSection8Benefit(client: any, timeframe: any)</div>
+    <div class='pre p1 fill-light mt0'>getSection8Benefit</div>
    
   
   
@@ -9109,10 +9001,7 @@ var new subsidy = contract rent - new rent share</p>
   
   
   
-  <div>Since: 09/2017
-
-With Project Hopes&#39;s guidance, we&#39;re using old known values (as
-known as they can get) to derive new values.</div>
+  
 
   
     <div class='py1 quiet mt1 prose-big'>Parameters</div>
@@ -9377,6 +9266,174 @@ can be waived.</p>
   
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='stackedbargraph'>
+      StackedBarGraph
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Visual representation of the table</p>
+<p>Alternatives:
+1. Stacked area graph for two data points
+2. Line graph of difference of just total money coming in</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>StackedBarGraph</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>client</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    full client object, with current
+and future. All client props are needed.
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>client.client</span> <code class='quiet'>any</code>
+  </td>
+  <td class='break-word'><span></span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getbenefittimeframes'>
+      getBenefitTimeFrames
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Abstracts current and future program and
+income values on Predictions form</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getBenefitTimeFrames</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>client</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>benefitCheck</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>benefitsFunc</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
   
 
   
@@ -10936,9 +10993,7 @@ will be pushed.
   </div>
   
 
-  <p>Set of validating functions for making sure
-value are what they need to be. Just for
-numbers right now.</p>
+  <p>Returns true if a string only contains characters for a nonnegative number</p>
 
  
   
@@ -10999,7 +11054,9 @@ numbers right now.</p>
   </div>
   
 
-  <p>Returns true if a string only contains characters for a nonnegative number</p>
+  <p>Set of validating functions for making sure
+value are what they need to be. Just for
+numbers right now.</p>
 
  
   
